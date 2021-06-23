@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+:root {
+	--accent-rgb: 63,81,181;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: black;
+	overflow: hidden;
+	font-family: "Roboto Mono";
+	color: white;
+	user-select: none;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+	padding: 0;
+}
+
+#main {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+video {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	z-index: -2;
+	filter: blur(5px) brightness(20%);
+}
+
+.mainheader {
+	font-size: 16px;
+	user-select: none;
+	color: white;
+	font-weight: bold;
+	text-shadow: 0 0 30px #ff00bf;
+}
+
+.subheader {
+	font-size: 5px;;
+	text-align: center;
+	font-weight: bold;
+}
+
+.list {
+	text-align: center;
+	font-size: 1.5em;
+	margin-top: 50px;
+	font-family: "Roboto Mono";
+	font-weight: bold;
+	text-shadow: 0 0 30px #ff00bf;
+}
+
+.list,pre {
+	background: repeating-linear-gradient(-45deg, purple 0%, red 12.5%, purple 50%);
+	background-size: 60vw 60vw;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	animation: slide 4s linear infinite forwards;
+}
+
+@keyframes slide {
+	0% {
+		background-position-x: 0%;
+	}
+	100% {
+		background-position-x: 60vw;
+	}
+}
+
+/* Info Box */
+.alert * {
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+	-ms-touch-action: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.alert *:focus {
+	outline: 0
+}
+
+.alert {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-left: -135px;
+	margin-top: -50px;
+	width: 270px;
+	text-align: center;
+	font-family: -apple-system, SF UI Text, Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.4;
+	border-radius: 13px;
+	overflow: hidden;
+	z-index: 9999999999999999999999998;
+	background-color: #302B3F;
+	animation: fadeIn ease 0.2s;
+	-webkit-animation: fadeIn ease 0.2s;
+	-moz-animation: fadeIn ease 0.2s;
+	-o-animation: fadeIn ease 0.2s;
+	-ms-animation: fadeIn ease 0.2s;
+}
+
+.alert .inner {
+	padding: 15px;
+}
+
+.alert .title {
+	font-weight: 500;
+	font-size: 18px;
+}
+
+.alert .text {
+	margin-top: 5px;
+}
+
+.alert .button {
+	position: relative;
+	height: 44px;
+	line-height: 44px;
+	font-size: 17px;
+	color: #548AD5;
+	border-radius: 0 0 13px 13px;
+	overflow: hidden;
+	cursor: url('select.png'), default !important;
+}
+
+.alert .button:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 1px;
+	width: 100%;
+	display: block;
+	background-color: #47454F;
+	z-index: 9999999999999999999999999;
+}
+
+.button:active {
+	animation: fadeHalf ease 0.2s forwards;
+	-webkit-animation: fadeHalf ease 0.2s forwards;
+	-moz-animation: fadeHalf ease 0.2s forwards;
+	-o-animation: fadeHalf ease 0.2s forwards;
+	-ms-animation: fadeHalf ease 0.2s forwards;
+}
+
+@keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+	
+@-moz-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+	
+@-webkit-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+	
+@-o-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+	
+@-ms-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+/* */
+
+@keyframes fadeHalf {
+100% {opacity:1;}
+50% {opacity:0.5;}
+}
+			
+@-moz-keyframes fadeHalf {
+100% {opacity:1;}
+50% {opacity:0.5;}
+}
+			
+@-webkit-keyframes fadeHalf {
+100% {opacity:1;}
+50% {opacity:0.5;}
+}
+			
+@-o-keyframes fadeHalf {
+100% {opacity:1;}
+50% {opacity:0.5;}
+}
+			
+@-ms-keyframes fadeHalf {
+100% {opacity:1;}
+50% {opacity:0.5;}
+}
+
+/* Mute */
+
+#mutebtn {	
+	background:url(../assets/unmute.png) no-repeat;
+	width:26px;
+	height:26px;
+	border:none; 
+	outline:none;
+	display: block;
+    margin: auto;
+	position: fixed;
+	bottom: 50px;
+    right: 50px;
+	transition: 0.2s;
+	-webkit-filter: drop-shadow(1px 1px 10px #03c2fc);
+	filter: drop-shadow(1px 1px 10px #03c2fc);
+}
+
+#mutebtn:hover {
+	transition: 0.2s;
+	-webkit-filter: drop-shadow(1px 1px 10px #fc03df);
+	filter: drop-shadow(1px 1px 10px #fc03df);
+}
